@@ -1,139 +1,898 @@
 [
   {
-    "projectName": "Database",
-    "projectUrl": "http://github.com/topics/database",
+    "projectName": "NativeScript",
+    "projectUrl": "https://www.github.com/topics/nativescript",
     "gitRepos": [
       {
-        "repoName": "\n            etcd\n",
-        "repoUrl": "http://github.com/etcd-io/etcd",
-        "issues": []
+        "repoName": "\n            NativeScript\n",
+        "repoUrl": "https://www.github.com/NativeScript/NativeScript",
+        "issues": [
+          {
+            "issueName": "Wrong behavior when scrolling list",
+            "issueUrl": "https://www.github.com/NativeScript/NativeScript/issues/9323"
+          },
+          {
+            "issueName": "Tabs/TabContentItem rendering error (first 2 indices 0 and 1 specifically) on iOS NativeScript Angular",
+            "issueUrl": "https://www.github.com/NativeScript/NativeScript/issues/9322"
+          },
+          {
+            "issueName": "[webpack5] Name too long",
+            "issueUrl": "https://www.github.com/NativeScript/NativeScript/issues/9316"
+          },
+          {
+            "issueName": "App stops working typically after inactivity",
+            "issueUrl": "https://www.github.com/NativeScript/NativeScript/issues/9315"
+          },
+          {
+            "issueName": "Cannot access '__WEBPACK_DEFAULT_EXPORT__' before initialization",
+            "issueUrl": "https://www.github.com/NativeScript/NativeScript/issues/9314"
+          },
+          {
+            "issueName": "Navigation in documentation from mobile does not exist",
+            "issueUrl": "https://www.github.com/NativeScript/NativeScript/issues/9313"
+          },
+          {
+            "issueName": "[TabView] Linear gradient for background color",
+            "issueUrl": "https://www.github.com/NativeScript/NativeScript/issues/9312"
+          },
+          {
+            "issueName": "Per page styles getting applied to subsequent pages (style isolation missing)",
+            "issueUrl": "https://www.github.com/NativeScript/NativeScript/issues/9311"
+          }
+        ]
       },
       {
-        "repoName": "\n            tidb\n",
-        "repoUrl": "http://github.com/pingcap/tidb",
-        "issues": []
+        "repoName": "\n            nativescript-vue\n",
+        "repoUrl": "https://www.github.com/nativescript-vue/nativescript-vue",
+        "issues": [
+          {
+            "issueName": "What is going to happen to the docs?",
+            "issueUrl": "https://www.github.com/nativescript-vue/nativescript-vue/issues/843"
+          },
+          {
+            "issueName": "NativeScript encountered a fatal error: Uncaught TypeError: Cannot read property '_leaveCb' of undefined.",
+            "issueUrl": "https://www.github.com/nativescript-vue/nativescript-vue/issues/841"
+          },
+          {
+            "issueName": "Items in ListView do not update when state cahnges",
+            "issueUrl": "https://www.github.com/nativescript-vue/nativescript-vue/issues/840"
+          },
+          {
+            "issueName": "v-model.number breaks cursor",
+            "issueUrl": "https://www.github.com/nativescript-vue/nativescript-vue/issues/838"
+          },
+          {
+            "issueName": "More information on error: [Vue warn]: Error in nextTick",
+            "issueUrl": "https://www.github.com/nativescript-vue/nativescript-vue/issues/837"
+          },
+          {
+            "issueName": "TimePicker not emitting event on first change in IOS",
+            "issueUrl": "https://www.github.com/nativescript-vue/nativescript-vue/issues/800"
+          },
+          {
+            "issueName": "Confirm dialog does not return focus on same element in IOS",
+            "issueUrl": "https://www.github.com/nativescript-vue/nativescript-vue/issues/799"
+          },
+          {
+            "issueName": "Docs don't explain how to use nativescript properties",
+            "issueUrl": "https://www.github.com/nativescript-vue/nativescript-vue/issues/798"
+          }
+        ]
       },
       {
-        "repoName": "\n            sheetjs\n",
-        "repoUrl": "http://github.com/SheetJS/sheetjs",
-        "issues": []
+        "repoName": "\n            LuaViewSDK\n",
+        "repoUrl": "https://www.github.com/alibaba/LuaViewSDK",
+        "issues": [
+          {
+            "issueName": "demo工程无法正常运行",
+            "issueUrl": "https://www.github.com/alibaba/LuaViewSDK/issues/94"
+          },
+          {
+            "issueName": "Problems with build.Gradle,",
+            "issueUrl": "https://www.github.com/alibaba/LuaViewSDK/issues/92"
+          },
+          {
+            "issueName": "debugger的问题",
+            "issueUrl": "https://www.github.com/alibaba/LuaViewSDK/issues/91"
+          },
+          {
+            "issueName": "本项目是否已停止维护开发?",
+            "issueUrl": "https://www.github.com/alibaba/LuaViewSDK/issues/90"
+          },
+          {
+            "issueName": "'lua.h' file not found",
+            "issueUrl": "https://www.github.com/alibaba/LuaViewSDK/issues/88"
+          },
+          {
+            "issueName": "'system' is unavailable: not available on iOS",
+            "issueUrl": "https://www.github.com/alibaba/LuaViewSDK/issues/87"
+          },
+          {
+            "issueName": "README单词拼写错误：widly -> widely",
+            "issueUrl": "https://www.github.com/alibaba/LuaViewSDK/issues/86"
+          },
+          {
+            "issueName": "LuaView android版本",
+            "issueUrl": "https://www.github.com/alibaba/LuaViewSDK/issues/85"
+          }
+        ]
       },
       {
-        "repoName": "\n            metabase\n",
-        "repoUrl": "http://github.com/metabase/metabase",
-        "issues": []
+        "repoName": "\n            angular-seed-advanced\n",
+        "repoUrl": "https://www.github.com/NathanWalker/angular-seed-advanced",
+        "issues": [
+          {
+            "issueName": "Unable to run on iOS emulator using npm run start.ios",
+            "issueUrl": "https://www.github.com/NathanWalker/angular-seed-advanced/issues/492"
+          },
+          {
+            "issueName": "NativeScript tns preview",
+            "issueUrl": "https://www.github.com/NathanWalker/angular-seed-advanced/issues/491"
+          },
+          {
+            "issueName": "The dev/prod build of angluar seed app is throwing Uncaught SyntaxError: Unexpected token < exception",
+            "issueUrl": "https://www.github.com/NathanWalker/angular-seed-advanced/issues/488"
+          },
+          {
+            "issueName": "use native UI",
+            "issueUrl": "https://www.github.com/NathanWalker/angular-seed-advanced/issues/487"
+          },
+          {
+            "issueName": "Error: com.tns.NativeScriptException: Failed to find module: \"./app/modules/core/index\", relative to: app/",
+            "issueUrl": "https://www.github.com/NathanWalker/angular-seed-advanced/issues/486"
+          },
+          {
+            "issueName": "Bundling adds and than removes files.",
+            "issueUrl": "https://www.github.com/NathanWalker/angular-seed-advanced/issues/485"
+          },
+          {
+            "issueName": "\"@angular/compiler-cli/index\"' has no exported member 'CodeGenerator'",
+            "issueUrl": "https://www.github.com/NathanWalker/angular-seed-advanced/issues/484"
+          },
+          {
+            "issueName": "Is there a simple example that mimics communication between sibling components?",
+            "issueUrl": "https://www.github.com/NathanWalker/angular-seed-advanced/issues/483"
+          }
+        ]
       },
       {
-        "repoName": "\n            typeorm\n",
-        "repoUrl": "http://github.com/typeorm/typeorm",
-        "issues": []
+        "repoName": "\n            ngx-formly\n",
+        "repoUrl": "https://www.github.com/ngx-formly/ngx-formly",
+        "issues": [
+          {
+            "issueName": "support multiple fields with the same key ",
+            "issueUrl": "https://www.github.com/ngx-formly/ngx-formly/issues/2787"
+          },
+          {
+            "issueName": "Add/remove fields in the FieldArray in case of using virtual scroll",
+            "issueUrl": "https://www.github.com/ngx-formly/ngx-formly/issues/2770"
+          },
+          {
+            "issueName": "Callback /event when formly finished rendering form?",
+            "issueUrl": "https://www.github.com/ngx-formly/ngx-formly/issues/2762"
+          },
+          {
+            "issueName": "Optional json schema object properties are required if they contain required properties",
+            "issueUrl": "https://www.github.com/ngx-formly/ngx-formly/issues/2752"
+          },
+          {
+            "issueName": "JSONSchema with string of arrays is not validated correctely",
+            "issueUrl": "https://www.github.com/ngx-formly/ngx-formly/issues/2750"
+          },
+          {
+            "issueName": "Taiga-UI theme for Formly",
+            "issueUrl": "https://www.github.com/ngx-formly/ngx-formly/issues/2748"
+          },
+          {
+            "issueName": "showValidation extra, analogue to showError",
+            "issueUrl": "https://www.github.com/ngx-formly/ngx-formly/issues/2728"
+          },
+          {
+            "issueName": "add doc for testing package",
+            "issueUrl": "https://www.github.com/ngx-formly/ngx-formly/issues/2723"
+          }
+        ]
       },
       {
-        "repoName": "\n            influxdb\n",
-        "repoUrl": "http://github.com/influxdata/influxdb",
-        "issues": []
+        "repoName": "\n            MLN\n",
+        "repoUrl": "https://www.github.com/momotech/MLN",
+        "issues": [
+          {
+            "issueName": "ArgoUIViewLoader，原生在和Argo交互时，Argo如何监听原生变化？",
+            "issueUrl": "https://www.github.com/momotech/MLN/issues/376"
+          },
+          {
+            "issueName": "ArgoUI在更新数据时，能否传入其他参数？extra",
+            "issueUrl": "https://www.github.com/momotech/MLN/issues/375"
+          },
+          {
+            "issueName": "iOS ArgoUI 在数据更新时，能否提供一个更新失败的回调",
+            "issueUrl": "https://www.github.com/momotech/MLN/issues/373"
+          },
+          {
+            "issueName": "iOS argoUI 加载view时，能否提供一个加载失败的回调",
+            "issueUrl": "https://www.github.com/momotech/MLN/issues/372"
+          },
+          {
+            "issueName": "iOS Argo view能提供一个预计算功能吗？根据对应的lua文件和数据在没有渲染的情况下，获取view的实际高度",
+            "issueUrl": "https://www.github.com/momotech/MLN/issues/370"
+          },
+          {
+            "issueName": "iOS ArgoUI的view在cell复用时，刷新数据之后会偶现元素偏移和白屏。",
+            "issueUrl": "https://www.github.com/momotech/MLN/issues/369"
+          },
+          {
+            "issueName": "iOS ArgoUI能提供一个获取View准确高度的的方法吗？现在直接拿view的height是不准确的。",
+            "issueUrl": "https://www.github.com/momotech/MLN/issues/368"
+          },
+          {
+            "issueName": "内存溢出JNI ERROR (app bug): local reference table overflow (max=512)",
+            "issueUrl": "https://www.github.com/momotech/MLN/issues/367"
+          }
+        ]
       },
       {
-        "repoName": "\n            cockroach\n",
-        "repoUrl": "http://github.com/cockroachdb/cockroach",
-        "issues": []
+        "repoName": "\n            nativescript-angular\n",
+        "repoUrl": "https://www.github.com/NativeScript/nativescript-angular",
+        "issues": [
+          {
+            "issueName": "Unwanted gesture pass through",
+            "issueUrl": "https://www.github.com/NativeScript/nativescript-angular/issues/2346"
+          },
+          {
+            "issueName": "Sample Hello World App will not reload in PlayGround",
+            "issueUrl": "https://www.github.com/NativeScript/nativescript-angular/issues/2343"
+          },
+          {
+            "issueName": "Quick way to get scroll event from ListView",
+            "issueUrl": "https://www.github.com/NativeScript/nativescript-angular/issues/2342"
+          },
+          {
+            "issueName": "RadCalendar can not import module in Angular",
+            "issueUrl": "https://www.github.com/NativeScript/nativescript-angular/issues/2339"
+          },
+          {
+            "issueName": "core.js:4117 ERROR TypeError: Cannot read property 'push' of null",
+            "issueUrl": "https://www.github.com/NativeScript/nativescript-angular/issues/2338"
+          },
+          {
+            "issueName": "[Nativescript 7] Scroll issues when keyboard show up",
+            "issueUrl": "https://www.github.com/NativeScript/nativescript-angular/issues/2336"
+          },
+          {
+            "issueName": "Is there a way to easily upgrade all angular deps to the latest?",
+            "issueUrl": "https://www.github.com/NativeScript/nativescript-angular/issues/2333"
+          },
+          {
+            "issueName": "RadListView / tkListItemTemplate index doesn't update when ObservableArray changes",
+            "issueUrl": "https://www.github.com/NativeScript/nativescript-angular/issues/2332"
+          }
+        ]
       },
       {
-        "repoName": "\n            dbeaver\n",
-        "repoUrl": "http://github.com/dbeaver/dbeaver",
-        "issues": []
+        "repoName": "\n            nativescript-plugin-firebase\n",
+        "repoUrl": "https://www.github.com/EddyVerbruggen/nativescript-plugin-firebase",
+        "issues": [
+          {
+            "issueName": "Property 'firestore' does not exist on type 'typeof firebase'.",
+            "issueUrl": "https://www.github.com/EddyVerbruggen/nativescript-plugin-firebase/issues/1804"
+          },
+          {
+            "issueName": "Property 'functions' does not exist on type 'typeof firebase'",
+            "issueUrl": "https://www.github.com/EddyVerbruggen/nativescript-plugin-firebase/issues/1803"
+          },
+          {
+            "issueName": "When will there be support for the \"!=\" and \"not-in\" WhereOfOperators?",
+            "issueUrl": "https://www.github.com/EddyVerbruggen/nativescript-plugin-firebase/issues/1802"
+          },
+          {
+            "issueName": "Can't re-log (autorelog) user to Nativescript Firebase App on iOS",
+            "issueUrl": "https://www.github.com/EddyVerbruggen/nativescript-plugin-firebase/issues/1800"
+          },
+          {
+            "issueName": "iOS new AppTrackingTransparency framework",
+            "issueUrl": "https://www.github.com/EddyVerbruggen/nativescript-plugin-firebase/issues/1799"
+          },
+          {
+            "issueName": "Crashlytics error causing lots of app crashes - FIRCLSUserLogging.m",
+            "issueUrl": "https://www.github.com/EddyVerbruggen/nativescript-plugin-firebase/issues/1798"
+          },
+          {
+            "issueName": "Question - Nativescript Firebase onAuthStateChanged, deleted app, redownload and data.loggedIn is still true",
+            "issueUrl": "https://www.github.com/EddyVerbruggen/nativescript-plugin-firebase/issues/1796"
+          },
+          {
+            "issueName": "No questions asked and no firebase config file generated",
+            "issueUrl": "https://www.github.com/EddyVerbruggen/nativescript-plugin-firebase/issues/1795"
+          }
+        ]
       }
     ]
   },
   {
-    "projectName": "Chrome",
-    "projectUrl": "http://github.com/topics/chrome",
+    "projectName": "TypeScript",
+    "projectUrl": "https://www.github.com/topics/typescript",
     "gitRepos": [
       {
-        "repoName": "\n            electron\n",
-        "repoUrl": "http://github.com/electron/electron",
+        "repoName": "\n            vscode\n",
+        "repoUrl": "https://www.github.com/microsoft/vscode",
+        "issues": [
+          {
+            "issueName": "Terminal crashes when it doesn't found power Shell in 32-bit OS",
+            "issueUrl": "https://www.github.com/microsoft/vscode/issues/121014"
+          },
+          {
+            "issueName": "Blank lines should not be deleted in column selection mode",
+            "issueUrl": "https://www.github.com/microsoft/vscode/issues/121013"
+          },
+          {
+            "issueName": "Duplicate Selected File in Context Menu (Right Click)",
+            "issueUrl": "https://www.github.com/microsoft/vscode/issues/121012"
+          },
+          {
+            "issueName": "weird bug",
+            "issueUrl": "https://www.github.com/microsoft/vscode/issues/121011"
+          },
+          {
+            "issueName": "Add word-swapping",
+            "issueUrl": "https://www.github.com/microsoft/vscode/issues/121010"
+          },
+          {
+            "issueName": "\"Invalid byte sequence in conversion input\" while using an emoji in a command",
+            "issueUrl": "https://www.github.com/microsoft/vscode/issues/121009"
+          },
+          {
+            "issueName": "wrong color",
+            "issueUrl": "https://www.github.com/microsoft/vscode/issues/121008"
+          },
+          {
+            "issueName": "Remove false-positive errors if there is an assertion",
+            "issueUrl": "https://www.github.com/microsoft/vscode/issues/121007"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            deno\n",
+        "repoUrl": "https://www.github.com/denoland/deno",
+        "issues": [
+          {
+            "issueName": "Improving the DevTools experience",
+            "issueUrl": "https://www.github.com/denoland/deno/issues/10113"
+          },
+          {
+            "issueName": "Panic when parsing certain structures",
+            "issueUrl": "https://www.github.com/denoland/deno/issues/10112"
+          },
+          {
+            "issueName": "console.table value misalignment with varying keys",
+            "issueUrl": "https://www.github.com/denoland/deno/issues/10111"
+          },
+          {
+            "issueName": "Add Deno.File.stat and Deno.File.statSync methods",
+            "issueUrl": "https://www.github.com/denoland/deno/issues/10109"
+          },
+          {
+            "issueName": "Stabilise Deno.fstat",
+            "issueUrl": "https://www.github.com/denoland/deno/issues/10106"
+          },
+          {
+            "issueName": "RequestEvent::respondWith() should return a promise",
+            "issueUrl": "https://www.github.com/denoland/deno/issues/10101"
+          },
+          {
+            "issueName": "proposal: Better logging on Deno.test",
+            "issueUrl": "https://www.github.com/denoland/deno/issues/10099"
+          },
+          {
+            "issueName": "WebGPU: Attempting to use mapped buffer with GPU panics",
+            "issueUrl": "https://www.github.com/denoland/deno/issues/10098"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            angular\n",
+        "repoUrl": "https://www.github.com/angular/angular",
+        "issues": [
+          {
+            "issueName": "[zonejs] An exception in event handler breaks execution of remaining handlers",
+            "issueUrl": "https://www.github.com/angular/angular/issues/41522"
+          },
+          {
+            "issueName": "Form statusChanges with async validators doesn't leave PENDING state",
+            "issueUrl": "https://www.github.com/angular/angular/issues/41519"
+          },
+          {
+            "issueName": "NGCC crashes with \"RangeError: Maximum call stack size exceeded\" on umd compilation of library",
+            "issueUrl": "https://www.github.com/angular/angular/issues/41509"
+          },
+          {
+            "issueName": "proposal: use TTL and last access time to evict unused versions from service-worker's cache",
+            "issueUrl": "https://www.github.com/angular/angular/issues/41508"
+          },
+          {
+            "issueName": "when use zone.js & ant design, the page will Endless loop",
+            "issueUrl": "https://www.github.com/angular/angular/issues/41506"
+          },
+          {
+            "issueName": "Make HttpErrorResponse mimic toString() Error class behavior",
+            "issueUrl": "https://www.github.com/angular/angular/issues/41505"
+          },
+          {
+            "issueName": "Rendering differences in createEmbeddedView",
+            "issueUrl": "https://www.github.com/angular/angular/issues/41501"
+          },
+          {
+            "issueName": "Run CanDeactivate guards before cross-origin navigation",
+            "issueUrl": "https://www.github.com/angular/angular/issues/41498"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            TypeScript\n",
+        "repoUrl": "https://www.github.com/microsoft/TypeScript",
+        "issues": [
+          {
+            "issueName": "async/await inferring",
+            "issueUrl": "https://www.github.com/microsoft/TypeScript/issues/43630"
+          },
+          {
+            "issueName": "Generator interface does not extend IterableIterable interface",
+            "issueUrl": "https://www.github.com/microsoft/TypeScript/issues/43629"
+          },
+          {
+            "issueName": "Indexing with symbol gives never on matched type",
+            "issueUrl": "https://www.github.com/microsoft/TypeScript/issues/43628"
+          },
+          {
+            "issueName": "Broken links in release notes (4.2.4 & 4.3 Beta)",
+            "issueUrl": "https://www.github.com/microsoft/TypeScript/issues/43626"
+          },
+          {
+            "issueName": "React HOCs generate extremely large and incorrect .d.ts declaration files, regression from 4.1.3",
+            "issueUrl": "https://www.github.com/microsoft/TypeScript/issues/43622"
+          },
+          {
+            "issueName": "Mapped type trigger a compilation error when called within a class",
+            "issueUrl": "https://www.github.com/microsoft/TypeScript/issues/43621"
+          },
+          {
+            "issueName": "Regression with template literal generics (4.3.0-beta)",
+            "issueUrl": "https://www.github.com/microsoft/TypeScript/issues/43620"
+          },
+          {
+            "issueName": "Template Literals in Record",
+            "issueUrl": "https://www.github.com/microsoft/TypeScript/issues/43618"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            material-ui\n",
+        "repoUrl": "https://www.github.com/mui-org/material-ui",
+        "issues": [
+          {
+            "issueName": "[docs] Allow table of contents viewable on mobile",
+            "issueUrl": "https://www.github.com/mui-org/material-ui/issues/25688"
+          },
+          {
+            "issueName": "Input label not aligned correctly for RTL",
+            "issueUrl": "https://www.github.com/mui-org/material-ui/issues/25687"
+          },
+          {
+            "issueName": "[docs] api-docs new props description missing",
+            "issueUrl": "https://www.github.com/mui-org/material-ui/issues/25681"
+          },
+          {
+            "issueName": "v5 Grid component errors within Storybook",
+            "issueUrl": "https://www.github.com/mui-org/material-ui/issues/25677"
+          },
+          {
+            "issueName": "top bar change color when its open and autocomplete",
+            "issueUrl": "https://www.github.com/mui-org/material-ui/issues/25667"
+          },
+          {
+            "issueName": "[TextField] Bouncing effect rendering issue",
+            "issueUrl": "https://www.github.com/mui-org/material-ui/issues/25664"
+          },
+          {
+            "issueName": "muiName is not part of Typescript typings for components",
+            "issueUrl": "https://www.github.com/mui-org/material-ui/issues/25662"
+          },
+          {
+            "issueName": "[core] Using hardcoded pseudo classes versus values coming from classes object",
+            "issueUrl": "https://www.github.com/mui-org/material-ui/issues/25659"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            storybook\n",
+        "repoUrl": "https://www.github.com/storybookjs/storybook",
+        "issues": [
+          {
+            "issueName": "Add ability to set Vue.js 2 state directly",
+            "issueUrl": "https://www.github.com/storybookjs/storybook/issues/14544"
+          },
+          {
+            "issueName": "How to load the vue-styled-components theme separately in a Vue project",
+            "issueUrl": "https://www.github.com/storybookjs/storybook/issues/14542"
+          },
+          {
+            "issueName": "ArgsTable Not Rendered For React Class Components",
+            "issueUrl": "https://www.github.com/storybookjs/storybook/issues/14541"
+          },
+          {
+            "issueName": "6.2.5 addon-link - LinkTo - New TypeScript Errors ",
+            "issueUrl": "https://www.github.com/storybookjs/storybook/issues/14539"
+          },
+          {
+            "issueName": "axe-core tries to reference node's crypto, which requires a fallback config in webpack 5",
+            "issueUrl": "https://www.github.com/storybookjs/storybook/issues/14538"
+          },
+          {
+            "issueName": "[6.2.7] Stoorybook does not refresh after save",
+            "issueUrl": "https://www.github.com/storybookjs/storybook/issues/14537"
+          },
+          {
+            "issueName": "Support a before method in axeTest to allow page customization before the test is run",
+            "issueUrl": "https://www.github.com/storybookjs/storybook/issues/14536"
+          },
+          {
+            "issueName": "Storybook 6.2.7 Unusable with ngOnDestroy takeUntil(this.destroyed$) pattern.",
+            "issueUrl": "https://www.github.com/storybookjs/storybook/issues/14533"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            ionic-framework\n",
+        "repoUrl": "https://www.github.com/ionic-team/ionic-framework",
+        "issues": [
+          {
+            "issueName": "bug: ionic-toolbar behaves different on iOS and Android",
+            "issueUrl": "https://www.github.com/ionic-team/ionic-framework/issues/23174"
+          },
+          {
+            "issueName": "bug: Ionic + Angular CDK Scroller causes chunk errors when running test suite",
+            "issueUrl": "https://www.github.com/ionic-team/ionic-framework/issues/23173"
+          },
+          {
+            "issueName": "bug: ion-slides height is broken after changing data inside ion-content",
+            "issueUrl": "https://www.github.com/ionic-team/ionic-framework/issues/23172"
+          },
+          {
+            "issueName": "bug: Hardware back event triggered twice (or more) if an IonReactRouter is unmounted and re-mounted",
+            "issueUrl": "https://www.github.com/ionic-team/ionic-framework/issues/23170"
+          },
+          {
+            "issueName": "bug: Blank screen is still an intermitten issue with vue application routing",
+            "issueUrl": "https://www.github.com/ionic-team/ionic-framework/issues/23162"
+          },
+          {
+            "issueName": "feat: improve performance when using ion-item-sliding",
+            "issueUrl": "https://www.github.com/ionic-team/ionic-framework/issues/23155"
+          },
+          {
+            "issueName": "bug: react, callbacks refs not supported",
+            "issueUrl": "https://www.github.com/ionic-team/ionic-framework/issues/23153"
+          },
+          {
+            "issueName": "feat: onDragStart listener for ion-reorder-group",
+            "issueUrl": "https://www.github.com/ionic-team/ionic-framework/issues/23148"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            prettier\n",
+        "repoUrl": "https://www.github.com/prettier/prettier",
+        "issues": [
+          {
+            "issueName": "as in mapped types + intersection + conditional type = ugliness",
+            "issueUrl": "https://www.github.com/prettier/prettier/issues/10667"
+          },
+          {
+            "issueName": "JSX className attribute does not wrap like HTML class attribute",
+            "issueUrl": "https://www.github.com/prettier/prettier/issues/10663"
+          },
+          {
+            "issueName": "Poor readability in for loop with modified array",
+            "issueUrl": "https://www.github.com/prettier/prettier/issues/10662"
+          },
+          {
+            "issueName": "Comment is duplicated when prettier-ignore is used",
+            "issueUrl": "https://www.github.com/prettier/prettier/issues/10661"
+          },
+          {
+            "issueName": "Improve formatting for do expressions",
+            "issueUrl": "https://www.github.com/prettier/prettier/issues/10660"
+          },
+          {
+            "issueName": "GraphQL anonymous operations have incorrect spacing after keyword",
+            "issueUrl": "https://www.github.com/prettier/prettier/issues/10655"
+          },
+          {
+            "issueName": "babel-ts: trailing commas after rest parameters in ambient contexts",
+            "issueUrl": "https://www.github.com/prettier/prettier/issues/10654"
+          },
+          {
+            "issueName": "TypeScript 4.3",
+            "issueUrl": "https://www.github.com/prettier/prettier/issues/10642"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "projectName": "Linux",
+    "projectUrl": "https://www.github.com/topics/linux",
+    "gitRepos": [
+      {
+        "repoName": "\n            the-art-of-command-line\n",
+        "repoUrl": "https://www.github.com/jlevy/the-art-of-command-line",
+        "issues": [
+          {
+            "issueName": "Please track my tracker hadbeen clone",
+            "issueUrl": "https://www.github.com/jlevy/the-art-of-command-line/issues/727"
+          },
+          {
+            "issueName": "Clone",
+            "issueUrl": "https://www.github.com/jlevy/the-art-of-command-line/issues/726"
+          },
+          {
+            "issueName": "很有帮助，打印出来慢慢看。",
+            "issueUrl": "https://www.github.com/jlevy/the-art-of-command-line/issues/722"
+          },
+          {
+            "issueName": "Add a License",
+            "issueUrl": "https://www.github.com/jlevy/the-art-of-command-line/issues/716"
+          },
+          {
+            "issueName": "Lack of systemd-related commands",
+            "issueUrl": "https://www.github.com/jlevy/the-art-of-command-line/issues/707"
+          },
+          {
+            "issueName": "Art da linha de comando",
+            "issueUrl": "https://www.github.com/jlevy/the-art-of-command-line/issues/705"
+          },
+          {
+            "issueName": "./Metasploit-Framework.sh",
+            "issueUrl": "https://www.github.com/jlevy/the-art-of-command-line/issues/704"
+          },
+          {
+            "issueName": "the art of command line",
+            "issueUrl": "https://www.github.com/jlevy/the-art-of-command-line/issues/703"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            node\n",
+        "repoUrl": "https://www.github.com/nodejs/node",
+        "issues": [
+          {
+            "issueName": "[Tracking Issue] Refactoring DNS",
+            "issueUrl": "https://www.github.com/nodejs/node/issues/38173"
+          },
+          {
+            "issueName": "tlsSocket.setMaxSendFragment results in an abort",
+            "issueUrl": "https://www.github.com/nodejs/node/issues/38169"
+          },
+          {
+            "issueName": "\"fs.writeSync\" results in an abort",
+            "issueUrl": "https://www.github.com/nodejs/node/issues/38168"
+          },
+          {
+            "issueName": "perf_hooks.monitorEventLoopDelay results in an abort",
+            "issueUrl": "https://www.github.com/nodejs/node/issues/38160"
+          },
+          {
+            "issueName": "V8 flags such as --print-bytecode prints the bytecode but --print-opt-code doesn't print anything",
+            "issueUrl": "https://www.github.com/nodejs/node/issues/38158"
+          },
+          {
+            "issueName": "FYI new branch protection rule created",
+            "issueUrl": "https://www.github.com/nodejs/node/issues/38157"
+          },
+          {
+            "issueName": "Assertion `(env_->execution_async_id()) == (0)' failed",
+            "issueUrl": "https://www.github.com/nodejs/node/issues/38155"
+          },
+          {
+            "issueName": "The Node REPL can't handle declaring a variable with the name util",
+            "issueUrl": "https://www.github.com/nodejs/node/issues/38139"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            atom\n",
+        "repoUrl": "https://www.github.com/atom/atom",
+        "issues": [
+          {
+            "issueName": "s",
+            "issueUrl": "https://www.github.com/atom/atom/issues/22169"
+          },
+          {
+            "issueName": "syntax highlighting",
+            "issueUrl": "https://www.github.com/atom/atom/issues/22168"
+          },
+          {
+            "issueName": "bh",
+            "issueUrl": "https://www.github.com/atom/atom/issues/22167"
+          },
+          {
+            "issueName": "d",
+            "issueUrl": "https://www.github.com/atom/atom/issues/22163"
+          },
+          {
+            "issueName": "Uncaught Error: dlopen(/private/var/folders/23/8l6_lfvj6fl89gtgsv725s_c0000gn/T/wzQL.3lhF4S/Atom....",
+            "issueUrl": "https://www.github.com/atom/atom/issues/22162"
+          },
+          {
+            "issueName": "Uncaught Error: dlopen(~/Desktop/atom-mac/Atom.app/Contents/Resources/app.asar.unpacked/node_modu...",
+            "issueUrl": "https://www.github.com/atom/atom/issues/22161"
+          },
+          {
+            "issueName": "The atom/language-ruby package needs a new release immediately",
+            "issueUrl": "https://www.github.com/atom/atom/issues/22160"
+          },
+          {
+            "issueName": "In gentoo libcrypto.so.1.0.0 and libssl.so.1.0.0 does not exist",
+            "issueUrl": "https://www.github.com/atom/atom/issues/22143"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            the-book-of-secret-knowledge\n",
+        "repoUrl": "https://www.github.com/trimstray/the-book-of-secret-knowledge",
         "issues": []
+      },
+      {
+        "repoName": "\n            hyper\n",
+        "repoUrl": "https://www.github.com/vercel/hyper",
+        "issues": [
+          {
+            "issueName": "Png image in window background",
+            "issueUrl": "https://www.github.com/vercel/hyper/issues/5484"
+          },
+          {
+            "issueName": "Prevent pane selection on mouse click",
+            "issueUrl": "https://www.github.com/vercel/hyper/issues/5480"
+          },
+          {
+            "issueName": "New Tabs are broken when Font size is too big",
+            "issueUrl": "https://www.github.com/vercel/hyper/issues/5470"
+          },
+          {
+            "issueName": "how can i use hyper as default terminal in macOS",
+            "issueUrl": "https://www.github.com/vercel/hyper/issues/5469"
+          },
+          {
+            "issueName": "Cyperpunk Theme Plugin Load Error",
+            "issueUrl": "https://www.github.com/vercel/hyper/issues/5438"
+          },
+          {
+            "issueName": "The Future of Hyper! 🚀",
+            "issueUrl": "https://www.github.com/vercel/hyper/issues/5435"
+          },
+          {
+            "issueName": "Use gnome shell gtk theme for title bar",
+            "issueUrl": "https://www.github.com/vercel/hyper/issues/5434"
+          },
+          {
+            "issueName": "After opening my vim editor and saving the file when i return back to the terminal the previuos comands are not visible",
+            "issueUrl": "https://www.github.com/vercel/hyper/issues/5433"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            alacritty\n",
+        "repoUrl": "https://www.github.com/alacritty/alacritty",
+        "issues": [
+          {
+            "issueName": "Cursor disappears on matching whitespace in neovim",
+            "issueUrl": "https://www.github.com/alacritty/alacritty/issues/4954"
+          },
+          {
+            "issueName": "Paste only pastes first byte with manual mouse selection",
+            "issueUrl": "https://www.github.com/alacritty/alacritty/issues/4953"
+          },
+          {
+            "issueName": "Background opacity not working on Windows 10 v1809",
+            "issueUrl": "https://www.github.com/alacritty/alacritty/issues/4946"
+          },
+          {
+            "issueName": "Colors are rendered incorrectly",
+            "issueUrl": "https://www.github.com/alacritty/alacritty/issues/4939"
+          },
+          {
+            "issueName": "OSX fullscreen glitchy text and selection",
+            "issueUrl": "https://www.github.com/alacritty/alacritty/issues/4905"
+          },
+          {
+            "issueName": "Crash on/after macOS sleep",
+            "issueUrl": "https://www.github.com/alacritty/alacritty/issues/4890"
+          },
+          {
+            "issueName": "Hints performance regression",
+            "issueUrl": "https://www.github.com/alacritty/alacritty/issues/4881"
+          },
+          {
+            "issueName": "Observed CSI query responses out of order",
+            "issueUrl": "https://www.github.com/alacritty/alacritty/issues/4872"
+          }
+        ]
+      },
+      {
+        "repoName": "\n            edex-ui\n",
+        "repoUrl": "https://www.github.com/GitSquared/edex-ui",
+        "issues": [
+          {
+            "issueName": "Error: unable to verify the first certificate",
+            "issueUrl": "https://www.github.com/GitSquared/edex-ui/issues/1103"
+          },
+          {
+            "issueName": "listen EACCES: permission denied 0.0.0.0:3000",
+            "issueUrl": "https://www.github.com/GitSquared/edex-ui/issues/1091"
+          },
+          {
+            "issueName": "gyp info spawn args",
+            "issueUrl": "https://www.github.com/GitSquared/edex-ui/issues/1086"
+          },
+          {
+            "issueName": "Progressive consumption of Memory/RAM",
+            "issueUrl": "https://www.github.com/GitSquared/edex-ui/issues/1066"
+          },
+          {
+            "issueName": "Child process issue with v2.2.6 on Windows",
+            "issueUrl": "https://www.github.com/GitSquared/edex-ui/issues/1057"
+          },
+          {
+            "issueName": "Fix CI pipeline for MacOS arm64 target",
+            "issueUrl": "https://www.github.com/GitSquared/edex-ui/issues/1054"
+          },
+          {
+            "issueName": "Support proxies/regulated networks",
+            "issueUrl": "https://www.github.com/GitSquared/edex-ui/issues/1050"
+          },
+          {
+            "issueName": "2.2.5 macOS framebuffer errors",
+            "issueUrl": "https://www.github.com/GitSquared/edex-ui/issues/1047"
+          }
+        ]
       },
       {
         "repoName": "\n            mkcert\n",
-        "repoUrl": "http://github.com/FiloSottile/mkcert",
-        "issues": []
-      },
-      {
-        "repoName": "\n            octotree\n",
-        "repoUrl": "http://github.com/ovity/octotree",
-        "issues": []
-      },
-      {
-        "repoName": "\n            nightmare\n",
-        "repoUrl": "http://github.com/segmentio/nightmare",
-        "issues": []
-      },
-      {
-        "repoName": "\n            linux-command\n",
-        "repoUrl": "http://github.com/jaywcjlove/linux-command",
-        "issues": []
-      },
-      {
-        "repoName": "\n            bypass-paywalls-chrome\n",
-        "repoUrl": "http://github.com/iamadamdev/bypass-paywalls-chrome",
-        "issues": []
-      },
-      {
-        "repoName": "\n            chromeless\n",
-        "repoUrl": "http://github.com/prisma-archive/chromeless",
-        "issues": []
-      },
-      {
-        "repoName": "\n            headless-recorder\n",
-        "repoUrl": "http://github.com/checkly/headless-recorder",
-        "issues": []
-      }
-    ]
-  },
-  {
-    "projectName": "SpaceVim",
-    "projectUrl": "http://github.com/topics/spacevim",
-    "gitRepos": [
-      {
-        "repoName": "\n            SpaceVim\n",
-        "repoUrl": "http://github.com/SpaceVim/SpaceVim",
-        "issues": []
-      },
-      {
-        "repoName": "\n            vim-galore-zh_cn\n",
-        "repoUrl": "http://github.com/wsdjeg/vim-galore-zh_cn",
-        "issues": []
-      },
-      {
-        "repoName": "\n            DotFiles\n",
-        "repoUrl": "http://github.com/wsdjeg/DotFiles",
-        "issues": []
-      },
-      {
-        "repoName": "\n            vim-chat\n",
-        "repoUrl": "http://github.com/wsdjeg/vim-chat",
-        "issues": []
-      },
-      {
-        "repoName": "\n            spacevim\n",
-        "repoUrl": "http://github.com/ctjhoa/spacevim",
-        "issues": []
-      },
-      {
-        "repoName": "\n            Hack-SpaceVim\n",
-        "repoUrl": "http://github.com/Gabirel/Hack-SpaceVim",
-        "issues": []
-      },
-      {
-        "repoName": "\n            FlyGrep.vim\n",
-        "repoUrl": "http://github.com/wsdjeg/FlyGrep.vim",
-        "issues": []
-      },
-      {
-        "repoName": "\n            GitHub.vim\n",
-        "repoUrl": "http://github.com/wsdjeg/GitHub.vim",
-        "issues": []
+        "repoUrl": "https://www.github.com/FiloSottile/mkcert",
+        "issues": [
+          {
+            "issueName": "SSL_ERROR_RX_RECORD_TOO_LONG",
+            "issueUrl": "https://www.github.com/FiloSottile/mkcert/issues/361"
+          },
+          {
+            "issueName": "how to run on Windows 7(32bit)",
+            "issueUrl": "https://www.github.com/FiloSottile/mkcert/issues/360"
+          },
+          {
+            "issueName": "Uninstall fails to uninstall",
+            "issueUrl": "https://www.github.com/FiloSottile/mkcert/issues/355"
+          },
+          {
+            "issueName": "Notify if JAVA_HOME is not set",
+            "issueUrl": "https://www.github.com/FiloSottile/mkcert/issues/352"
+          },
+          {
+            "issueName": "[Question] mkcert vs cert-manager",
+            "issueUrl": "https://www.github.com/FiloSottile/mkcert/issues/350"
+          },
+          {
+            "issueName": "[Question] mkcert vs Lets Encrypt",
+            "issueUrl": "https://www.github.com/FiloSottile/mkcert/issues/349"
+          },
+          {
+            "issueName": "unable to use in virtualbox",
+            "issueUrl": "https://www.github.com/FiloSottile/mkcert/issues/348"
+          },
+          {
+            "issueName": "Instructions for generating certificates for MariaDB/ Postgres ",
+            "issueUrl": "https://www.github.com/FiloSottile/mkcert/issues/347"
+          }
+        ]
       }
     ]
   }

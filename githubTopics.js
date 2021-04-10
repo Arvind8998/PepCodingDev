@@ -4,7 +4,7 @@ const fs = require("fs")
 
 
 let finalData = []
-request("https://github.com/topics", callback)
+request("https://www.github.com/topics", callback)
 
 function callback(err, res, html) {
   if (!err) {
@@ -13,7 +13,7 @@ function callback(err, res, html) {
     let divs = $(".no-underline.d-flex.flex-column.flex-justify-center")
     for (let i = 0; i < divs.length; i++) {
       let projectName = $($(divs[i]).find("p")[0]).text().split(" ")[8].split("\n")[0];
-      let projectUrl = "http://github.com" + $(divs[i]).attr("href")
+      let projectUrl = "https://www.github.com" + $(divs[i]).attr("href")
       finalData.push({
         projectName: projectName,
         projectUrl: projectUrl,
@@ -25,7 +25,6 @@ function callback(err, res, html) {
 }
 
 let repoArray = []
-let count = 0
 let totalRepos = 0
 
 function getRepositories(finalDataIdx, err, res, html) {
@@ -36,33 +35,34 @@ function getRepositories(finalDataIdx, err, res, html) {
     totalRepos += repoLinks.length > 0 ? 8 : repoLinks.length
     for (let i = 0; i < repoLinks.length && i < 8; i++) {
       let repoName = $(repoLinks[i]).text()
-      let repoUrl = "http://github.com" + $(repoLinks[i]).attr("href")
+      let repoUrl = "https://www.github.com" + $(repoLinks[i]).attr("href")
       finalData[finalDataIdx]["gitRepos"].push({
-        repoName: repoName,
-        repoUrl: repoUrl,
-        issues: [],
+        "repoName": repoName,
+        "repoUrl": repoUrl,
+        "issues": [],
       })
       request(repoUrl + "/issues", getIssues.bind(this, finalDataIdx, i))
     }
   }
 }
 
-function getIssues(finalDataIdx, repoIdx, err, res, html) {
-  if (!err) {
-    repoArray = []
-    let $ = cheerio.load(html)
-    count++;
-    let issueLinks = $(".Link--primary v-align-middle no-underline h4 js-navigation-open markdown-title")
-    for (let i = 0; i < issueLinks.length && i < 8; i++) {
-      let issueName = $(issueLinks[i]).text()
-      let issueUrl = "http://github.com" + $issueLinks[i].attr("href")
-      finalData[finalDataIdx]["gitRepos"][repoIdx]["issues"].push({
-        issueName: issueName,
-        repoUrl: issueUrl,
-      })
+let count = 0;
+function getIssues(finalDataIdx,repoIdx,err,res,html) {
+    if(!err) {
+        count++;
+        let $ = cheerio.load(html);
+        let issueLinks = $(".Link--primary.v-align-middle.no-underline.h4.js-navigation-open.markdown-title");
+        console.log("Number of issues " + issueLinks.length);
+        for(let i = 0; i < issueLinks.length && i < 8; i++) {
+            let issueUrl = "https://www.github.com" + $(issueLinks[i]).attr("href");
+            let issueName = $(issueLinks[i]).text();
+            finalData[finalDataIdx]["gitRepos"][repoIdx]["issues"].push({
+                "issueName": issueName,
+                "issueUrl": issueUrl
+            });
+        }
+        if(count == totalRepos) {
+            fs.writeFileSync("finalGit.json", JSON.stringify(finalData));
+        }
     }
-    if (count == 24) {
-      fs.writeFileSync("finalGit.json",JSON.stringify(finalData))
-    }
-  }
 }
