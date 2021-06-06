@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+
+      .cards {
+        background-color: orange;
+        height: 25vh;
+        width: 10vw;
+        flex-shrink: 0;
+        margin: 4rem;
+      }
+      .container {
+        flex-shrink: unset;
+        display: flex;
+        background-color: yellow;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Q- Right now cards overflow the container in x direction. Fix this by making the overflowed cards coming after (below them) the non-overflowed cards in the container area. Also the container should automatically grow in size to accept all cards  -->
+    <div class="container">
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <div class="cards"></div>
+    </div>
+  </body>
+</html>
