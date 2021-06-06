@@ -1,0 +1,57 @@
+<!-- Q- Write the css and required classes such that paragraph go alternatively, paragrapgh 1 aligned on right, paragrapgh 2 aligned on left, paragrapgh 3 aligned on right and so on. 
+ Given code :  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    p {
+      font-size: 2rem;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    .right {
+      text-align: right;
+    }
+    .left {
+      text-align: left;
+    }
+  </style>
+  <body>
+    <h1>Dummy</h1>
+    <p >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, fuga.
+    </p>
+    <p >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis dolores
+      nisi nesciunt eos non, vitae eligendi sit, placeat temporibus est fugiat
+      suscipit autem magni adipisci assumenda, vero modi saepe. Necessitatibus
+      consequuntur saepe iusto earum obcaecati rerum odit voluptas dolorum
+      animi.
+    </p>
+    <p >Lorem, ipsum dolor.</p>
+    <p >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eius
+      quos, ex amet reiciendis ab sed explicabo ipsa error optio obcaecati
+      corporis voluptatibus itaque dolore quibusdam quas tempore modi sunt,
+      deleniti pariatur soluta? Fugiat necessitatibus placeat aut beatae nobis.
+      Reiciendis consectetur nulla, quis a distinctio laboriosam fugit quia
+      blanditiis dicta.
+    </p>
+
+    <script>
+      let ptags = document.querySelectorAll("p");
+
+      for(let i=0; i< ptags.length; i++){
+        if(i%2 ==0){
+          ptags[i].classList.add("right");
+        }
+      }
+    </script>
+  </body>
+</html>

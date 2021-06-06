@@ -1,0 +1,61 @@
+<!--Q- Given the html below style it so that it looks like "img-final". Note that you cannot change html or add any extra classes, you just have to write css. Also google font - "Dancing Script" is used and link for the same is already added in the code  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+   
+  </head>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+    }
+    body{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+    .card{
+      height: 70vh;
+      width: 40vw;
+      border: 40px solid brown;
+    }
+    h1{
+      font-family: "Dancing Script";
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    li{
+      margin-bottom: 1rem;
+    }
+  </style>
+  <body>
+    <div class="card">
+      <h1>
+        Les Papilles <br />
+        <span>(Menu)</span>
+      </h1>
+      <ol>
+        <li>Cheese Cheddar Burger</li>
+        <li>Quadro Formaggi Pizza</li>
+        <li>Overfilled Cheese Lasagna</li>
+        <li>Mac and Cheese</li>
+        <li>Mozzarella Linguine</li>
+        <li>Arabiata Spaghetti</li>
+        <li>Cadillac Margarita</li>
+        <li>Harvey Wallbanger</li>
+      </ol>
+    </div>
+  </body>
+</html>

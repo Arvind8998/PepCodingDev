@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 1px solid;
+        height: 20rem;
+        width: 35rem;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    Q- On clicking of the button some text is added in the div. Repeating this
+    task we see that text starts to go out of the div. We dont want this. Fix
+    it. Add only vertical scroll bar 
+    <div></div>
+    <button>Add</button>
+    <script>
+      let div = document.querySelector("div");
+      let button = document.querySelector("button");
+      button.addEventListener("click", function () {
+        let p = document.createElement("p");
+        p.innerText =
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa eaque, minus cupiditate reiciendis a ducimus enim quia accusantium voluptate praesentium!";
+        div.append(p);
+      });
+    </script>
+  </body>
+</html>

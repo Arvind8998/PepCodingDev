@@ -1,0 +1,41 @@
+<!-- Q- Align the given box to the centre of the screen  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        /* height: 100vh; 
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+      .box {
+        background-color: orange;
+        height: 30rem;
+        width: 30rem;
+
+        /* margin: auto;
+        margin-top: calc((100vh - 30rem)/2); */
+        
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+// absolute is applied with respect to nearest relative parent, by default body is relative
