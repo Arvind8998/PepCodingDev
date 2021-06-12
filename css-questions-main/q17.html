@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Solution: */
+      /* * {
+        box-sizing: border-box;
+      } */
+
+      body {
+        margin: 0;
+      }
+
+      .cards {
+        border: 1px solid;
+        height: 25vh;
+        width: 10vw;
+        flex-shrink: 0;
+        margin: 4rem;
+      }
+      .container {
+        flex-shrink: unset;
+        display: flex;
+      }
+
+      .c1 {
+        padding: 1.5rem;
+      }
+      .c2 {
+        border: 20px solid;
+      }
+
+      .c3 {
+        padding-top: 4rem;
+        border-left: 10px dashed;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Q- Even though all 3 cards have same height and width they appear different on UI. Fix this  -->
+    <div class="container">
+      <div class="cards c1">Lorem ipsum dolor sit amet.</div>
+      <div class="cards c2">Lorem ipsum dolor sit amet.</div>
+      <div class="cards c3">Lorem ipsum dolor sit amet.</div>
+    </div>
+  </body>
+</html>

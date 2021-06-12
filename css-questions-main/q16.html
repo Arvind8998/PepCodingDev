@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+
+      .cards {
+        background-color:crimson;
+        height: 25vh;
+        width: 10vw;
+        margin: 4rem;
+      }
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .invisible{
+        display: none;
+        /* Solution: */
+        /* remove display and add following  */
+        /* opacity: 0; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Q- Right now on double clicking any card is gets removed from the screen but the other cards change their relative position. We dont want that. Fix it  -->
+    <div class="container">
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <script>
+        let cards = document.querySelectorAll(".cards")
+        for(let i = 0;i<cards.length;i++){
+          cards[i].addEventListener("dblclick",function(e){
+            e.currentTarget.classList.add("invisible")
+          })
+        }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!-- Q- In the code below we have created a navbar and to its action divs we have given a height and width but still they are coming in different lines instead of a single line. Without changing the html code fix this without using flexbox or grid. Also remove borders and make the navbar black(background-color) and its text white.
+
+Given code: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .action {
+        font-size: 1.5rem;
+        width: 8rem;
+        height: 4rem;
+        padding-top: calc(2.5rem / 2);
+        text-align: center;
+      }
+      div {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="action">Home</div>
+      <div class="action">About</div>
+      <div class="action">Contact</div>
+    </div>
+  </body>
+</html>
+
+<!-- Solution: 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .action {
+        font-size: 1.5rem;
+        width: 8rem;
+        height: 4rem;
+        display: inline-block;
+        padding-top: calc(2.5rem / 2);
+        text-align: center;
+      }
+      div {
+        /* border: 1px solid; */
+      }
+      .navbar {
+        color: white;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="action">Home</div>
+      <div class="action">About</div>
+      <div class="action">Contact</div>
+    </div>
+  </body>
+</html> -->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video controls autoplay></video>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="capture">Capture</button>
+
+    <script>
+      let video = document.querySelector("video")
+      let startBtn = document.querySelector("#start")
+      let stopBtn = document.querySelector("#stop")
+      let capBtn = document.querySelector("#capture")
+      let mediaRecorder
+      let chunks = []
+      startBtn.addEventListener("click", function () {
+        //code likhna jise recording start ho
+        mediaRecorder.start()
+      })
+      stopBtn.addEventListener("click", function () {
+        //code likhna jise recording band ho
+        mediaRecorder.stop()
+      })
+
+      capBtn.addEventListener("click", function () {
+        let canvas = document.createElement("canvas")
+        canvas.height = video.videoHeight
+        canvas.width = video.videoWidth
+        let tool = canvas.getContext("2d")
+        tool.drawImage(video, 0, 0)
+
+        let link = canvas.toDataURL()
+        let a = document.createElement("a")
+        a.href = link
+        a.download = "img.png"
+        a.click()
+        a.remove()
+        canvas.remove()
+      })
+
+      navigator.mediaDevices
+        .getUserMedia({ video: true, audio: true })
+        .then(function (mediaStream) {
+          let options = { mimeType: "video/webm" }
+
+          mediaRecorder = new MediaRecorder(mediaStream, options)
+
+          mediaRecorder.addEventListener("dataavailable", function (e) {
+            chunks.push(e.data)
+          })
+
+          mediaRecorder.addEventListener("stop", function (e) {
+            let blob = new Blob(chunks, { type: "video/webm" })
+            chunks = []
+            let a = document.createElement("a")
+            let url = window.URL.createObjectURL(blob)
+            a.href = url
+            a.download = "video.webm"
+            a.click()
+            a.remove()
+          })
+
+          video.srcObject = mediaStream
+        })
+        .catch(function (err) {
+          console.log(err)
+        })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+      .element {
+        height: 10rem;
+        width: 10rem;
+        background-color: yellow;
+        margin: auto;
+        /* solution */
+        border-radius: 50%;
+        margin-top: calc((100vh - 10rem) / 2);
+      }
+
+      /* Solution:  */
+
+      /* @media (max-width: 1024px) {
+        .element {
+          border-radius: 25%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .element {
+          border-radius: 0%;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- Q- For desktop sizes make the box on the screen a circle for tablet sizes make it a box but with round edges and for phone sizes make it a box with straight edges  -->
+    <div class="element"></div>
+  </body>
+</html>
