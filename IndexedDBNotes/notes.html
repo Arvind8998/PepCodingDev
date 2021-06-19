@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input id ="heading" type="text" />
+      <input id ="textBody" type="text" />
+
+        <select>
+          <option value="pId">Placement Notes</option>
+          <option value="gId">General Notes</option>
+          <option value="cId">College Notes</option>
+        </select>
+
+        <button>Submit</button>
+    </div>
+
+    <script>
+      let req = indexedDB.open("NotesDB", 2)
+      let db;
+      let selected = document.querySelector("select")
+      let heading = document.querySelector("select")
+      let noteBody = document.querySelector("select")
+      selected.addEventListener("click", function (e) {
+      })
+      req.addEventListener("success", function () {
+        //trigerred when existing db
+        db = req.result
+        addNote("placementNotes");
+        // alert("DB opened successfully")
+      })
+
+      req.addEventListener("upgradeneeded", function () {
+        let accessToDB = req.result
+        accessToDB.createObjectStore("placementNotes", { keyPath: "pId" })
+        accessToDB.createObjectStore("generalNotes", { keyPath: "gId" })
+        accessToDB.createObjectStore("collegeNotes", { keyPath: "cId" })
+        // alert("created successfully")
+        // I can create an object store
+        // trigered when db is create first time or version is upgraded
+      })
+
+      req.addEventListener("error", function () {
+        alert("error in creation")
+      })
+
+      function addNote(collectionName){
+        if(!db) return
+        let obj = {
+            pId : 12344, title: 'abc', content: 'xyz'
+        }
+        debugger
+        let tx = db.transaction(collectionName, "readwrite");
+        let reqObjectStore = tx.objectStore(collectionName);
+        reqObjectStore.add(obj);
+      }
+    </script>
+  </body>
+</html>
