@@ -24,7 +24,7 @@ body {
 .menu-bar {
   display: flex;
   align-items: center;
-  height: 4.5%;
+  height: 3.5%;
   width: 100%;
   border: 1px solid black;
 }
@@ -105,8 +105,11 @@ body {
   }
   
   .font-styles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 40%;
+  }
+  
+  .menu-options div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }

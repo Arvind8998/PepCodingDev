@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Excel</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
   </head>
   <body>
     <div class="container">
@@ -18,7 +22,13 @@
       </div>
 
       <div class="menu-options">
-        <div class="bui"></div>
+          
+        <div class="bui">
+            <span class="material-icons"> format_bold </span>
+            <span class="material-icons"> format_italic </span>
+            <span class="material-icons"> format_underlined </span>
+        </div>
+
         <div class="font-styles">
           <select id="cell-font-family">
             <option value="arial">arial</option>
@@ -35,8 +45,15 @@
             <option value="36">36</option>
           </select>
         </div>
-        <div class="alignment"></div>
-        <div class="colors"></div>
+        <div class="alignment">
+            <span class="material-icons"> format_align_left </span>
+          <span class="material-icons"> format_align_center </span>
+          <span class="material-icons"> format_align_right </span>
+        </div>
+        <div class="colors">
+            <span class="material-icons"> format_color_text </span>
+          <span class="material-icons"> format_color_fill </span>
+        </div>
       </div>
 
       <div class="formula-bar">
