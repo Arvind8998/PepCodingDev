@@ -2,6 +2,14 @@ let body = document.querySelector("body")
 body.spellcheck = false
 
 let menuBarTags = document.querySelectorAll(".menu-bar p")
+let columnTags = document.querySelector(".column-tags")
+
+for (let i = 0; i < 26; i++) {
+  let div = document.createElement("div")
+  div.classList.add("column-tag-cell")
+  div.innerText = String.fromCharCode(65 + i)
+  columnTags.append(div)
+}
 
 for (let i = 0; i < menuBarTags.length; i++) {
   menuBarTags[i].addEventListener("click", () => {
