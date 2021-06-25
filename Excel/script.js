@@ -7,15 +7,16 @@ let rowNumbers = document.querySelector(".row-numbers")
 let grid = document.querySelector(".grid")
 let formulaAddressInput = document.querySelector("#select-cell")
 let prevSelectedCell = null
+let fragmentDiv = document.createElement("div")
 
-grid.addEventListener("click",(e)=>{
-  if(e.target.classList.contains("cell")){
-    if(prevSelectedCell){
+grid.addEventListener("click", (e) => {
+  if (e.target.classList.contains("cell")) {
+    if (prevSelectedCell) {
       prevSelectedCell.classList.remove("grid-selected-cell")
     }
-    let clickedCell = e.target;
+    let clickedCell = e.target
     prevSelectedCell = clickedCell
-    clickedCell.classList.add("grid-selected-cell");
+    clickedCell.classList.add("grid-selected-cell")
     formulaAddressInput.vaue = clickedCell.getAttribute("data-address")
   }
 })
@@ -34,19 +35,6 @@ for (let i = 0; i < 26; i++) {
   columnTags.append(div)
 }
 
-for (let i = 0; i < 100; i++) {
-  let row = document.createElement("div")
-  row.classList.add("row")
-  for (let j = 1; j <= 26; j++) {
-    let cell = document.createElement("div")
-    cell.classList.add("cell")
-    cell.contentEditable = true
-    cell.setAttribute('data-address', String.fromCharCode(65 +i) + j)
-    row.append(cell)
-  }
-  grid.append(row)
-}
-
 for (let i = 0; i < menuBarTags.length; i++) {
   menuBarTags[i].addEventListener("click", () => {
     if (menuBarTags[i].classList.contains("menu-bar-option-selected")) {
@@ -59,3 +47,32 @@ for (let i = 0; i < menuBarTags.length; i++) {
     }
   })
 }
+
+//1048576
+let fragmentCreator = async () => {
+  let fragmentsGetter = () => {
+    for (let i = 0; i < 100; i++) {
+      let row = document.createElement("div")
+      row.classList.add("row")
+      for (let j = 1; j <= 26; j++) {
+        let cell = document.createElement("div")
+        cell.classList.add("cell")
+        cell.contentEditable = true
+        cell.setAttribute("data-address", String.fromCharCode(65 + i) + j)
+        row.append(cell)
+      }
+      fragmentDiv.append(row)
+    }
+  }
+
+  let fragments = await fragmentsGetter()
+  console.log(fragments)
+  grid.append(fragmentDiv)
+}
+
+window.addEventListener("scroll", (event) => {
+  let scroll = this.scrollY;
+  console.log(scroll)
+});
+
+fragmentCreator()

@@ -1,0 +1,40 @@
+<!-- Q- Create a login interface (take a static string password check for this question). Write a script so that once a user logs in he/she shouldn't have to log in again on refreshing the page.  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="userInput" value="" />
+  </body>
+  <script>
+    window.onload = function () {
+      if (sessionStorage.getItem("Password")) {
+        document.getElementById("userInput").remove() 
+        let el = document.createElement("h2")
+        el.innerText = "Logged In!!!"
+          document.body.append(el)
+        return
+      } else {
+          debugger
+        takeInput()
+      }
+    }
+
+    let takeInput = () => {
+      document.getElementById("userInput").addEventListener("keypress", (e) => {
+        if (e.key == "Enter") {
+          const pwd = e.target.value
+          sessionStorage.setItem("Password", pwd)
+          let el = document.createElement("h2");
+          el.innerText = "Logged In!!!"
+          document.body.append(el)
+          document.getElementById("userInput").remove()
+        }
+      })
+    }
+  </script>
+</html>
