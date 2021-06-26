@@ -76,7 +76,7 @@ body {
   position: relative;
   width: 100%;
   height: 76.5%;
-  padding-left: 30px;
+  padding-left: 40px;
   padding-top: 30px;
 }
 
@@ -122,35 +122,39 @@ body {
   z-index: 2;
   left: 0;
   height: 30px;
-  width: 30px;
+  width: 40px;
   top: 19vh;
-  background-color: red;
+  background-color: #eee;
+  border-right: 5px solid darkgray;
+  border-bottom: 5px solid darkgray;
 }
 
 .column-tags {
   position: absolute;
   display: flex;
   top: 0;
-  left: 30px;
+  left: 40px;
 }
 
 .column-tag-cell {
   height: 30px;
   width: 80px;
-  background-color: #009431e8;
-  border: 1px solid white;
+  background-color: #eee;
+  border: 1px solid gray;
   text-align: center;
   flex-shrink: 7;
+  position: relative;
+  padding: 4px;
 }
 
 
 .row-number-cell {
   height: 30px;
-  width: 30px;
-  border: 1px solid white;
-  color: white;
+  width: 40px;
+  border: 1px solid gray;
+  color: black;
   text-align: center;
-  background-color: #009431e8;
+  background-color: #eee;
   padding-top: 5px;
 }
 
@@ -175,4 +179,21 @@ body {
 
 .grid-selected-cell{
   border: 3px solid #009431e8;
+}
+
+.resizer {
+  /* All resizers are positioned absolutely inside the element */
+  position: absolute;
+}
+
+.resizer-r {
+  cursor: col-resize;
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 5px;
+}
+
+.selected-resizable-col{
+  background-color:  rgba(128, 128, 128, 0.466) !important;
 }
