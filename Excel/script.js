@@ -7,15 +7,32 @@ let rowNumbers = document.querySelector(".row-numbers")
 let grid = document.querySelector(".grid")
 let container = document.querySelector(".container")
 
-let formulaAddressInput = document.querySelector("#select-cell")
+let formulaAddressInput = document.querySelector("#formula-cell")
 let fragmentDiv = document.createElement("div")
 let dataObj = {}
 
 function removeFromUpstream(dependent, onWhichItIsDepending) {
   let newDownstream = []
   let oldDownstream = dataObj[onWhichItIsDepending].downstream
-  debugger
   newDownstream = oldDownstream.filter((el) => el !== dependent)
+  dataObj[onWhichItIsDepending].downstream = newDownstream
+}
+
+function addToDownstream(tobeAdded, inWhichWeAreAdding) {
+  //get downstream of the cell in which we have to add
+  let reqDownstream = dataObj[inWhichWeAreAdding].downstream
+
+  reqDownstream.push(tobeAdded)
+}
+
+function removeFromUpstream(dependent, onWhichItIsDepending) {
+  let newDownstream = []
+
+  let oldDownstream = dataObj[onWhichItIsDepending].downstream
+
+  for (let i = 0; i < oldDownstream.length; i++) {
+    if (oldDownstream[i] != dependent) newDownstream.push(oldDownstream[i])
+  }
   dataObj[onWhichItIsDepending].downstream = newDownstream
 }
 
@@ -70,49 +87,6 @@ function updateDownstreamElements(elementAddress) {
   }
 }
 
-let excelCellsEventsClosure = () => {
-  let prevResizableColCell = null
-  let prevSelectedCell = null
-  container.addEventListener("click", (e) => {
-    if (e.target.classList.contains("cell")) {
-      if (prevSelectedCell) {
-        prevSelectedCell.classList.remove("grid-selected-cell")
-      }
-      let clickedCell = e.target
-      prevSelectedCell = clickedCell
-      clickedCell.classList.add("grid-selected-cell")
-      formulaAddressInput.vaue = clickedCell.getAttribute("data-address")
-    } else if (e.target.classList.contains("column-tag-cell")) {
-      if (prevResizableColCell)
-        prevResizableColCell.classList.remove("selected-resizable-col")
-      prevResizableColCell = e.target
-      e.target.classList.add("selected-resizable-col")
-    }
-  })
-  container.addEventListener("input", function (e) {
-    console.log(e.target.innerText)
-    let address = e.target.getAttribute("data-address")
-    dataObj[address].value = Number(e.target.innerText)
-    dataObj[address].formula = ""
-
-    //upstream clear
-    let currCellUpstream = dataObj[address].upstream
-
-    for (let i = 0; i < currCellUpstream.length; i++) {
-      removeFromUpstream(address, currCellUpstream[i])
-    }
-
-    dataObj[address].upstream = []
-    //downstream cells update
-
-    let currCellDownstream = dataObj[address].downstream
-
-    for (let i = 0; i < currCellDownstream.length; i++) {
-      updateDownstreamElements(currCellDownstream[i])
-    }
-  })
-}
-excelCellsEventsClosure()
 
 for (let i = 1; i <= 100; i++) {
   let div = document.createElement("div")
@@ -195,16 +169,16 @@ for (let i = 0; i < menuBarTags.length; i++) {
 
 let fragmentCreator = async () => {
   let fragmentsGetter = () => {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 1; i <= 100; i++) {
       let row = document.createElement("div")
       row.classList.add("row")
-      for (let j = 1; j <= 26; j++) {
+      for (let j = 0; j < 26; j++) {
         let cell = document.createElement("div")
 
         cell.classList.add("cell")
 
         cell.contentEditable = true
-        let address = String.fromCharCode(i + 65) + j
+        let address = String.fromCharCode(j + 65) + i
         cell.setAttribute("data-address", address)
         dataObj[address] = {
           value: "",
@@ -229,3 +203,132 @@ window.addEventListener("scroll", (event) => {
 })
 
 fragmentCreator()
+
+let myDebounce = function (callback, delay) {
+  let context = this,
+    args = arguments
+  let timer
+  return function (...args2) {
+    debugger
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      callback.apply(context, [...args, ...args2])
+    }, delay)
+  }
+}
+
+let setCellFormulaCalculation = function (...args) {
+  let e = args[args.length-2]
+  let prevSelectedCell = args[args.length-1]
+  debugger
+  if (e.target.id === "complete-formula") {
+    let formula = e.target.value //"2 * A1"
+
+    let selectedCellAddress = prevSelectedCell.getAttribute("data-address")
+
+    dataObj[selectedCellAddress].formula = formula
+
+    let forumlaArr = formula.split(" ") //["2","*","A1"]
+
+    let elementsArray = []
+
+    for (let i = 0; i < forumlaArr.length; i++) {
+      if (
+        forumlaArr[i] != "+" &&
+        forumlaArr[i] != "-" &&
+        forumlaArr[i] != "*" &&
+        forumlaArr[i] != "/" &&
+        isNaN(Number(forumlaArr[i]))
+      ) {
+        elementsArray.push(forumlaArr[i])
+      }
+    }
+
+    //BEFORE SETTING NEW UPSTREAM
+    //CLEAR OLD UPSTREAM
+
+    let oldUpstream = dataObj[selectedCellAddress].upstream
+
+    for (let k = 0; k < oldUpstream.length; k++) {
+      removeFromUpstream(selectedCellAddress, oldUpstream[k])
+    }
+
+    dataObj[selectedCellAddress].upstream = elementsArray
+    for (let j = 0; j < elementsArray.length; j++) {
+      addToDownstream(selectedCellAddress, elementsArray[j])
+    }
+    let valObj = {}
+
+    for (let i = 0; i < elementsArray.length; i++) {
+      let formulaDependency = elementsArray[i]
+
+      valObj[formulaDependency] = dataObj[formulaDependency].value
+    }
+
+    for (let j = 0; j < formulaArr.length; j++) {
+      if (valObj[formulaArr[j]]) {
+        formulaArr[j] = valObj[formulaArr[j]]
+      }
+    }
+
+    formula = formulaArr.join(" ")
+    let newValue = eval(formula)
+
+    dataObj[selectedCellAddress].value = newValue
+
+    let selectedCellDownstream = dataObj[selectedCellAddress].downstream
+
+    for (let i = 0; i < selectedCellDownstream.length; i++) {
+      updateDownstreamElements(selectedCellDownstream[i])
+    }
+
+    oldCell.innerText = newValue
+    forumlaInput.value = ""
+  } else {
+    let address = e.target.getAttribute("data-address")
+    dataObj[address].value = Number(e.target.innerText)
+    dataObj[address].formula = ""
+
+    //upstream clear
+    let currCellUpstream = dataObj[address].upstream
+
+    for (let i = 0; i < currCellUpstream.length; i++) {
+      removeFromUpstream(address, currCellUpstream[i])
+    }
+
+    dataObj[address].upstream = []
+    //downstream cells update
+
+    let currCellDownstream = dataObj[address].downstream
+
+    for (let i = 0; i < currCellDownstream.length; i++) {
+      updateDownstreamElements(currCellDownstream[i])
+    }
+  }
+}
+
+let setBetterFormulaValues = myDebounce(setCellFormulaCalculation, 3000)
+
+let excelCellsEventsClosure = () => {
+  let prevResizableColCell = null
+  let prevSelectedCell = null
+  container.addEventListener("click", (e) => {
+    if (e.target.classList.contains("cell")) {
+      if (prevSelectedCell) {
+        prevSelectedCell.classList.remove("grid-selected-cell")
+      }
+      let clickedCell = e.target
+      prevSelectedCell = clickedCell
+      clickedCell.classList.add("grid-selected-cell")
+      formulaAddressInput.value = clickedCell.getAttribute("data-address")
+    } else if (e.target.classList.contains("column-tag-cell")) {
+      if (prevResizableColCell)
+        prevResizableColCell.classList.remove("selected-resizable-col")
+      prevResizableColCell = e.target
+      e.target.classList.add("selected-resizable-col")
+    }
+  })
+    container.addEventListener("change", e=>setBetterFormulaValues(e,prevSelectedCell))
+  }
+
+excelCellsEventsClosure()
