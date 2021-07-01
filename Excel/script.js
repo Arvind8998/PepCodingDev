@@ -8,6 +8,8 @@ let grid = document.querySelector(".grid")
 let container = document.querySelector(".container")
 
 let formulaAddressInput = document.querySelector("#formula-cell")
+let formulaCell = document.querySelector("#complete-formula")
+
 let fragmentDiv = document.createElement("div")
 let dataObj = {}
 
@@ -54,16 +56,16 @@ function updateDownstreamElements(elementAddress) {
   //2- jis element ko update kr rhe hai uska formula leao
   let currFormula = dataObj[elementAddress].formula
   //formula ko space ke basis pr split maro
-  let forumlaArr = currFormula.split(" ")
+  let formulaArr = currFormula.split(" ")
   //split marne ke baad jo array mili uspr loop ara and formula me jo variable h(cells) unko unki value se replace krdo using valObj
-  for (let j = 0; j < forumlaArr.length; j++) {
-    if (valObj[forumlaArr[j]]) {
-      forumlaArr[j] = valObj[forumlaArr[j]]
+  for (let j = 0; j < formulaArr.length; j++) {
+    if (valObj[formulaArr[j]]) {
+      formulaArr[j] = valObj[formulaArr[j]]
     }
   }
 
   //3- Create krlo wapis formula from the array by joining it
-  currFormula = forumlaArr.join(" ")
+  currFormula = formulaArr.join(" ")
 
   //4- evaluate the new value using eval function
   let newValue = eval(currFormula)
@@ -86,7 +88,6 @@ function updateDownstreamElements(elementAddress) {
     }
   }
 }
-
 
 for (let i = 1; i <= 100; i++) {
   let div = document.createElement("div")
@@ -209,7 +210,6 @@ let myDebounce = function (callback, delay) {
     args = arguments
   let timer
   return function (...args2) {
-    debugger
     clearTimeout(timer)
     timer = setTimeout(() => {
       callback.apply(context, [...args, ...args2])
@@ -218,9 +218,8 @@ let myDebounce = function (callback, delay) {
 }
 
 let setCellFormulaCalculation = function (...args) {
-  let e = args[args.length-2]
-  let prevSelectedCell = args[args.length-1]
-  debugger
+  let e = args[args.length - 2]
+  let prevSelectedCell = args[args.length - 1]
   if (e.target.id === "complete-formula") {
     let formula = e.target.value //"2 * A1"
 
@@ -228,19 +227,19 @@ let setCellFormulaCalculation = function (...args) {
 
     dataObj[selectedCellAddress].formula = formula
 
-    let forumlaArr = formula.split(" ") //["2","*","A1"]
+    let formulaArr = formula.split(" ") //["2","*","A1"]
 
     let elementsArray = []
 
-    for (let i = 0; i < forumlaArr.length; i++) {
+    for (let i = 0; i < formulaArr.length; i++) {
       if (
-        forumlaArr[i] != "+" &&
-        forumlaArr[i] != "-" &&
-        forumlaArr[i] != "*" &&
-        forumlaArr[i] != "/" &&
-        isNaN(Number(forumlaArr[i]))
+        formulaArr[i] != "+" &&
+        formulaArr[i] != "-" &&
+        formulaArr[i] != "*" &&
+        formulaArr[i] != "/" &&
+        isNaN(Number(formulaArr[i]))
       ) {
-        elementsArray.push(forumlaArr[i])
+        elementsArray.push(formulaArr[i])
       }
     }
 
@@ -273,7 +272,6 @@ let setCellFormulaCalculation = function (...args) {
 
     formula = formulaArr.join(" ")
     let newValue = eval(formula)
-
     dataObj[selectedCellAddress].value = newValue
 
     let selectedCellDownstream = dataObj[selectedCellAddress].downstream
@@ -282,28 +280,8 @@ let setCellFormulaCalculation = function (...args) {
       updateDownstreamElements(selectedCellDownstream[i])
     }
 
-    oldCell.innerText = newValue
-    forumlaInput.value = ""
-  } else {
-    let address = e.target.getAttribute("data-address")
-    dataObj[address].value = Number(e.target.innerText)
-    dataObj[address].formula = ""
-
-    //upstream clear
-    let currCellUpstream = dataObj[address].upstream
-
-    for (let i = 0; i < currCellUpstream.length; i++) {
-      removeFromUpstream(address, currCellUpstream[i])
-    }
-
-    dataObj[address].upstream = []
-    //downstream cells update
-
-    let currCellDownstream = dataObj[address].downstream
-
-    for (let i = 0; i < currCellDownstream.length; i++) {
-      updateDownstreamElements(currCellDownstream[i])
-    }
+    prevSelectedCell.innerText = newValue
+    e.target.value = ""
   }
 }
 
@@ -328,7 +306,31 @@ let excelCellsEventsClosure = () => {
       e.target.classList.add("selected-resizable-col")
     }
   })
-    container.addEventListener("change", e=>setBetterFormulaValues(e,prevSelectedCell))
-  }
+
+  formulaCell.addEventListener("keyup", (e) =>
+    setBetterFormulaValues(e, prevSelectedCell)
+  )
+  grid.addEventListener("keyup", (e) => {
+    let address = e.target.getAttribute("data-address")
+    dataObj[address].value = Number(e.target.innerText)
+    dataObj[address].formula = ""
+
+    //upstream clear
+    let currCellUpstream = dataObj[address].upstream
+
+    for (let i = 0; i < currCellUpstream.length; i++) {
+      removeFromUpstream(address, currCellUpstream[i])
+    }
+
+    dataObj[address].upstream = []
+    //downstream cells update
+
+    let currCellDownstream = dataObj[address].downstream
+
+    for (let i = 0; i < currCellDownstream.length; i++) {
+      updateDownstreamElements(currCellDownstream[i])
+    }
+  })
+}
 
 excelCellsEventsClosure()

@@ -55,7 +55,6 @@
         let obj = {
             pId : 12344, title: 'abc', content: 'xyz'
         }
-        debugger
         let tx = db.transaction(collectionName, "readwrite");
         let reqObjectStore = tx.objectStore(collectionName);
         reqObjectStore.add(obj);
